@@ -58,3 +58,12 @@ console.log(factorial(3));
 //We return the product.
 
 //#########################################################################################################
+
+//3.
+//Fancy Fibonacci
+
+/* Use time-space tradeoff to accelerate running time of iFib(num) 
+that returns numth number in theFibonacci sequence. 
+
+Recall iFib(0)=0, iFib(1)=1, iFib(2)=1, iFib(3)=2.
+*/
