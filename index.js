@@ -1,46 +1,4 @@
 //1.
-//Flatten
-
-/* Flatten a given array, eliminating nested and empty arrays. 
-Do not alter it; return a new one retaining order. For [1,[2,3],4,[]] return [1,2,3,4].
-
-Second: work ‘in-place’ in the given array (do not create another). 
-Alter order if needed. Ex.: [1,[2,3],4,[]] could become [1,3,4,2].
-
-Third: make your algorithm both in-place and stable. 
-Do you need a return value? */
-
-function flatten(arr){
-    var newArr = [];
-
-    for(var i = 0; i < arr.length; i++){
-        if(Array.isArray(arr[i])){
-
-            for(var j = 0; j < arr[i].length; j++){
-
-                newArr.push(arr[i][j]);
-            }
-        }
-        else{
-            newArr.push(arr[i]);
-        }
-    }
-
-    return newArr;
-}
-
-//Example:
-console.log(flatten([1,[2,3],4,[]]));
-
-//We set a new array to push the values into.
-//We loop through the array.
-//If the value is an array, we loop through that array and push the values into the new array.
-//If the value is not an array, we push that value into the new array.
-//We return the new array.
-
-//#########################################################################################################
-
-//2.
 //Smarter Sum
 
 /* Use time-space tradeoff to accelerate average running time for iSigma(num) 
@@ -65,5 +23,38 @@ console.log(iSigma(4));
 //We loop through the number.
 //We add the number to the sum.
 //We return the sum.
+
+//#########################################################################################################
+
+//2.
+//Faster Factorial
+
+/* Remember Factorial(num)? 
+It returned the product of positive integers from 1 to num. 
+
+Examples: Factorial(1) = 1, Factorial(2) = 2, Factorial(3) = 6. 
+
+For these purposes, Factorial(0) = 1. 
+
+Recreate this function, 
+but use a time-space tradeoff to accelerate the average running time. */
+
+function factorial(num){
+    var product = 1;
+
+    for(var i = 1; i <= num; i++){
+        product *= i;
+    }
+
+    return product;
+}
+
+//Example:
+console.log(factorial(3));
+
+//We set a product variable to 1.
+//We loop through the number.
+//We multiply the number to the product.
+//We return the product.
 
 //#########################################################################################################
