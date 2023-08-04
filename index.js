@@ -67,3 +67,23 @@ that returns numth number in theFibonacci sequence.
 
 Recall iFib(0)=0, iFib(1)=1, iFib(2)=1, iFib(3)=2.
 */
+
+function iFib(num){
+    var fib = [0, 1];
+
+    for(var i = 2; i <= num; i++){
+        fib[i] = fib[i - 2] + fib[i - 1];
+    }
+
+    return fib[num];
+}
+
+//Example:
+console.log(iFib(3));
+
+//We set a fib array to 0 and 1.
+//We loop through the number.
+//We add the previous two numbers to the fib array.
+//We return the fib array.
+
+//#########################################################################################################
