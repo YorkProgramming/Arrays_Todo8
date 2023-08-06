@@ -99,3 +99,23 @@ which we will define as the sum of the previous 3 values.
 Tribonaccis start with { 0, 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, ... }. 
 Again, use a time-space tradeoff to make it fast. 
 */
+
+function iTrib(num){
+    var trib = [0, 0, 1];
+
+    for(var i = 3; i <= num; i++){
+        trib[i] = trib[i - 3] + trib[i - 2] + trib[i - 1];
+    }
+
+    return trib[num];
+}
+
+//Example:
+console.log(iTrib(3));
+
+//We set a trib array to 0, 0, 1.
+//We loop through the number.
+//We add the previous three numbers to the trib array.
+//We return the trib array.
+
+//#########################################################################################################
